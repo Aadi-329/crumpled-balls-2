@@ -1,4 +1,4 @@
-var ground,ball,l1_db,l2_db,l_3db,dust
+var ground,ball,dustbin1,cons
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
@@ -19,10 +19,9 @@ function setup() {
 	//Create the Bodies Here.
 ground=new Ground(400,680,800,20);
 ball=new Ball(200,200,20);
-l1_db=new dustbin(650,660,200,10);
-l2_db=new dustbin(550,600,10,150)
-l_3db=new dustbin(750,600,10,150);
 
+
+dustbin1=new dustbin(650,660,200,10);
 	Engine.run(engine);
 
 }
@@ -32,9 +31,7 @@ function draw() {
   background(255,255,255);
   ground.display();
   ball.display();
-  l1_db.display();
-  l2_db.display();
-  l_3db.display();
+ dustbin1.display();
  
   keypressed();
 }
